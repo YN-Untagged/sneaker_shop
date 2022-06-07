@@ -1,8 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --violetBlueDark : #3f4bd0;
+  --violetBlueLight: #797CEF;
+  --violetDark: #4E174C;
+  --violetLight: #A878DC;
+  --grey: #888597;
+  --bg: #f4effd
+}
+
 *{
   padding: 0;
   margin: 0;
 }
 
 body{
-  background-color: rgb(255, 247, 255);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+  background-color: var(--bg);
+  color: var(--grey);
+}
+
+.main_container{
+  margin-top: 10%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.text_gray{
+  color: var(--grey);
+}
+
+.text_violet{
+  color: var(--violetDark);
+}
+
+.product_list{
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.product_list ::-webkit-scrollbar{
+  display:none;
 }
