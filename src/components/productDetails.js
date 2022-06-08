@@ -8,7 +8,7 @@ function ItemDetails(props){
         <div className='product-details_card'>
             <img src={item.src} className='details_image'/>
             <h1 className='details_price'>${item.price}</h1>
-            <div class="details_info">
+            <div className="details_info">
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <form name='add-item-form'>
@@ -16,7 +16,7 @@ function ItemDetails(props){
                         {item.sizes.map((size)=>
                             <>
                                 <input type='radio' className='btn-check' name='options' id={size}  value={size}/>
-                                <label className='btn btn-light size_btn' for={size}>{size}</label>
+                                <label className='btn btn-light size_btn' htmlFor={size}>{size}</label>
                             </>
                         )}
                     </div>
@@ -24,7 +24,7 @@ function ItemDetails(props){
                         {item.colors.map((color)=>
                             <>
                                 <input type='radio' className='btn-check' name='options' id={color}  value={color}/>
-                                <label className='btn btn-light color_btn' for={color} style={{color: color}}>
+                                <label className='btn btn-light color_btn' htmlFor={color} style={{color: color}}>
                                     <i className='fas fa-circle fa-2x'></i>
                                 </label>
                             </>

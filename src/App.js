@@ -13,16 +13,16 @@ function App() {
     { id: 4, src: "images/shoe5.png", name: "Cararo sports foot", price: 165, description: "Lite racer slip-on design", sizes: [4, 8, 11], colors:["white", "black","gray"]}
   ];
 
-  const viewDetails = ((id) => 
-    <ItemDetails product={products[id]}/>
-  );
+  const viewDetails = ((id) => {
+    return(<ItemDetails product={products[id]}/>);
+  });
 
   return (
     <div className='container-fluid'>
       <Navigator/>
       <div className='container-fluid main_container'>
         <div className='product_list'>
-          <AddProductCard products={products}/>
+          <AddProductCard products={products} view={viewDetails} />
         </div>
       </div>
       <div className='container-fluid details_container'>
