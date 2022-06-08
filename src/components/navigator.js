@@ -9,7 +9,7 @@ function Navigator(){
                 <a className="navbar-brand logo_circle "><span>SP. Products</span></a>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link active">Products</a>
+                        <a className="nav-link">Products</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link">Category</a>
@@ -31,9 +31,8 @@ function Navigator(){
                 </ul>
             </div>
         </nav>
-
         <nav className="navbar navbar-expand-sm fixed-bottom">
-            <div className="container-fluid">
+            <div className="container-fluid nav_bottom">
                 <ul className='navbar-nav'>
                     <li className="nav-item">
                         <a className="nav-link">New arrivals</a>
@@ -51,6 +50,7 @@ function Navigator(){
                 </div>
             </div>
         </nav>
+        
         </>
     );
 }

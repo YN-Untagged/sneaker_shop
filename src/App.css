@@ -3,7 +3,7 @@
 :root{
   --violetBlueDark : #3f4bd0;
   --violetBlueLight: #797CEF;
-  --violetDark: #4E174C;
+  --violetDark: #5a1958;
   --violetLight: #A878DC;
   --grey: #888597;
   --bg: #f4effd
@@ -22,8 +22,21 @@ body{
   color: var(--grey);
 }
 
+.container-fluid{
+  height: 100%;
+}
+
 .main_container{
-  margin-top: 10%;
+  padding-top: 250px;
+  width: 70%;
+  float: right;
+}
+
+.details_container{
+  width: 30%;
+  float:left;
+  padding-left: 50px;
+  padding-top: 170px;
 }
 
 a{
@@ -40,12 +53,14 @@ a{
 
 .product_list{
   display: inline-flex;
+  overflow-x: scroll;
   flex-direction: row;
-  width: 100%;
   -ms-overflow-style: none; 
   scrollbar-width: none;
+  width: 100%;
 }
 
 .product_list ::-webkit-scrollbar{
   display:none;
 }
+

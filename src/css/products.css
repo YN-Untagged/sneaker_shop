@@ -1,9 +1,11 @@
+/*Product list styling*/
 .card{
     width: 350px;
     height: 500px;
     border: none;
     background-color: transparent;
     float: left;
+    padding-right: 40px;
 }
 
 .image_holder{
@@ -39,4 +41,95 @@
 .product_info{
     padding-top: 50px;
 }
+
+/*Product Details styling*/
+
+.product-details_card{
+    border-radius: 10%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--violetBlueLight);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flexbox;
+}
+
+.details_image{
+    width: calc(100% + 50px);
+    left: -90px;
+    top: -20px;
+    position: relative;
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.radios_container{
+    padding-top: 20px;
+}
+
+.radios_container label{
+    padding: 10px 10px;
+    border-radius: 30%;
+    margin: 5px 10px;
+    color: white;
+}
+
+.radios_container input[type="radio"]:checked + label{
+    border-bottom: 2px solid var(--violetBlueDark);
+    background-color: #e6e7fd;
+}
+
+.color_btn{
+    background-color: var(--bg);
+}
+
+.size_btn{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+.details_btn_container{
+    justify-content: flex-end;
+    display: flex;
+    float: right;
+    bottom: -0px;
+    position: relative;
+    width: fit-content;
+}
+
+.details_add_btn{
+    background-color: var(--violetBlueDark);
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 15%;
+}
+
+.details_price{
+    float: right;
+    padding: 0 50px;
+}
+
+.details_info{
+    bottom:  -100px;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.details_info p{
+    font-weight: 300;
+}
+
+
+
+
+
+
+
 

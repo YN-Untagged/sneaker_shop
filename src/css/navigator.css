@@ -1,3 +1,7 @@
+.navbar{
+    padding: 20px 25px;
+}
+
 .navbar-brand, .nav-link{
     font-weight: 400;
     color: var(--grey);
@@ -27,7 +31,7 @@
 .logo_circle span{
     color: var(--grey);
     font-weight:500;
-    mix-blend-mode: difference;
+    mix-blend-mode:screen;
 }
 
 .likes{
@@ -36,6 +40,12 @@
     background-color: var(--violetBlueDark);
     margin-left: -20px;
     top: -20px;
+}
+
+.nav_bottom{
+    width: 70%;
+    margin-right: 0;
+    padding-bottom: 40px;
 }
 
 .btn_back, .btn_next{
@@ -49,7 +59,6 @@
 
 .btn_back{
     background-color: var(--grey);
-    
 }
 
 .btn_next{
@@ -57,5 +66,4 @@
     left: -8px;
     top: -10px;
     position: relative;
-
 }
