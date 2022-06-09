@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Navigator from './components/navigator';
+import NavigatorBottom from './components/navBottom'
 import AddProductCard from './components/products';
 import ItemDetails from './components/productDetails';
 
@@ -13,22 +14,61 @@ function App() {
     { id: 4, src: "images/shoe5.png", name: "Cararo sports foot", price: 165, description: "Lite racer slip-on design", sizes: [4, 8, 11], colors:["white", "black","gray"]}
   ];
 
+  const [productId, setProductId] = useState(0);
+
   const viewDetails = ((id) => {
-    return(<ItemDetails product={products[id]}/>);
+    setProductId(id);
+  });
+
+  const scrollList = ((direction)=> {
+    const elem = document.getElementById('product-list');
+    if(direction === 0){
+      let scroller = elem.scrollLeft;
+      let elemWidth = elem.clientWidth;
+      let scrollableWidth = elem.scrollWidth;
+      let total = scrollableWidth - scroller - elemWidth;
+      
+      if(total != elem.offsetWidth)
+      {
+          elem.scrollLeft += 420;
+      }
+    }
+    else{
+      if( elem.scrollLeft != 0)
+      {
+          elem.scrollLeft -= 420;
+      }
+    }
   });
 
   return (
-    <div className='container-fluid'>
-      <Navigator/>
-      <div className='container-fluid main_container'>
-        <div className='product_list'>
-          <AddProductCard products={products} view={viewDetails} />
+    <>
+      <div class='row'>
+        <Navigator />
+      </div>
+      
+      <div className='row main_container'>
+        <div className='col-lg-4 secondary_container'>
+            {/*Card Details*/}
+            <div class='container-fluid details_container'>
+              <ItemDetails product={products[productId]} />
+            </div>
+        </div>
+        <div class="col-lg-8 secondary_container">
+          <div class="container-fluid">
+            {/*Product List*/}
+            <div className='product_list row' id='product-list'>
+              <AddProductCard products={products} view={viewDetails} />
+            </div>
+
+            {/*Bottom Navigator*/}
+            <div class="row bottom_nav">
+              <NavigatorBottom scroll={scrollList}/>
+            </div>
+          </div>
         </div>
       </div>
-      <div className='container-fluid details_container'>
-        <ItemDetails product={products[0]}/>
-      </div>
-    </div>
+    </>
   );
 }
 

@@ -19,18 +19,20 @@
     padding: 10px 15px;
     border-radius: 50%;
     margin-right: 10px;
+    align-items: flex-end;
 }
 
 .logo_circle{
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     color: var(--grey);
     background-color: var(--violetBlueLight);
 }
 
-.logo_circle span{
+.logo_circle .logo{
     color: var(--grey);
-    font-weight:500;
+    font-size: 26px;
+    font-weight: 500;
     mix-blend-mode:screen;
 }
 
@@ -66,4 +68,17 @@
     left: -8px;
     top: -10px;
     position: relative;
+}
+
+.nav-item a:focus + .checked_mark{
+    color: var(--violetBlueDark);
+    display: block;
+}
+
+.checked_mark{
+    display: none;
+    font-weight: bold;
+    height: 2px;
+    padding:0;
+    text-align: start;
 }

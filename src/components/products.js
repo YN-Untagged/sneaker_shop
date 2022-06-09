@@ -5,13 +5,12 @@ import '../css/products.css';
 function AddProductCard(props){
     
     const view = ((id)=>{
-        alert(id);
         props.view (id);
     });
 
     return(
         props.products.map((item) =>
-            <div>
+            <div className='card_holder'>
                 <div className='card' key={item.id}>
                     <div className='image_holder' style={{backgroundColor: `hsl(${Math.floor(Math.random()*360)}deg, 65%, 55%`}}>
                         <div className='add_btn'><i className="fas fa-plus"></i></div>

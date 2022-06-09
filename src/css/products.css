@@ -1,11 +1,17 @@
 /*Product list styling*/
+.card_holder{
+    display: block;
+    width: 400px;
+    height: 600px;
+    float: left;
+    padding-right: 50px;
+}
+
 .card{
-    width: 350px;
-    height: 500px;
+    height: 100%;
+    padding-top: 30px;
     border: none;
     background-color: transparent;
-    float: left;
-    padding-right: 40px;
 }
 
 .image_holder{
@@ -52,7 +58,8 @@
     color: white;
     height: 100%;
     width: 100%;
-    display: flexbox;
+    display: block;
+    align-items: flex-end;
 }
 
 .details_image{
@@ -78,9 +85,22 @@
     color: white;
 }
 
-.radios_container input[type="radio"]:checked + label{
-    border-bottom: 2px solid var(--violetBlueDark);
+.radios_container input[type="radio"]:checked + label {
     background-color: #e6e7fd;
+}
+
+.radios_container input[type="radio"]:checked + label  .checked_mark{
+    color: var(--violetBlueDark);
+    display: block;
+}
+
+
+.checked_mark{
+    display: none;
+    font-weight: bold;
+    height: 2px;
+    padding:0;
+    text-align: start;
 }
 
 .color_btn{
@@ -98,7 +118,7 @@
     justify-content: flex-end;
     display: flex;
     float: right;
-    bottom: -0px;
+    bottom: 0;
     position: relative;
     width: fit-content;
 }
@@ -109,6 +129,8 @@
     width: 120px;
     height: 120px;
     border-radius: 15%;
+    bottom: 0;
+    left: 0;    
 }
 
 .details_price{
@@ -117,9 +139,11 @@
 }
 
 .details_info{
-    bottom:  -100px;
-    padding: 50px 50px;
-    position: relative;
+    padding: 10% 20px 0;
+    width: 100%;;
+    bottom: 0;
+    text-align: left;
+    align-items: flex-end;
 }
 
 .details_info p{

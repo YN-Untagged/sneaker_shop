@@ -16,7 +16,10 @@ function ItemDetails(props){
                         {item.sizes.map((size)=>
                             <>
                                 <input type='radio' className='btn-check' name='options' id={size}  value={size}/>
-                                <label className='btn btn-light size_btn' htmlFor={size}>{size}</label>
+                                <label className='btn btn-light size_btn' htmlFor={size}>
+                                    {size}
+                                    <span className='checked_mark'><i class="fas fa-window-minimize"></i></span>
+                                </label>
                             </>
                         )}
                     </div>
@@ -26,17 +29,18 @@ function ItemDetails(props){
                                 <input type='radio' className='btn-check' name='options' id={color}  value={color}/>
                                 <label className='btn btn-light color_btn' htmlFor={color} style={{color: color}}>
                                     <i className='fas fa-circle fa-2x'></i>
+                                    <span className='checked_mark'><i class="fas fa-window-minimize"></i></span>
                                 </label>
                             </>
                         )}
 
                     </div>
+                    
                 </form>
             </div>
-            <div className='details_btn_container'>
-            <button type='submit' className='details_add_btn btn' form='add-item-form'><i className='fas fa-plus fa-3x'></i></button>
+            <div class="details_btn_container">
+                <button type='submit' className='details_add_btn btn' form='add-item-form'><i className='fas fa-plus fa-3x'></i></button>
             </div>
-            
         </div>
 
     )
