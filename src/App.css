@@ -30,6 +30,9 @@ body{
   align-items: flex-end;
 }
 
+.main_container .col-lg-4{
+  padding-left: 25px;
+}
 
 .row{
   margin:0;
@@ -52,7 +55,8 @@ a{
   align-items: flex-end;
   bottom: 0;
   margin-bottom: 0;
-  padding-top: 180px;
+  padding-top: 170px;
+  padding-right: 0;
 }
 
 .product_list{
@@ -62,14 +66,15 @@ a{
   width: 100%;
   height: 85%;
   padding: 10px 20px;
-  overflow-x: hidden;
+  overflow-x: auto;
   scrollbar-width: 0;
   -ms-overflow-style:none;
   scroll-behavior: smooth;
   align-items: flex-end;
 }
 
-.product_list ::-webkit-scrollbar{
+::-webkit-scrollbar{
   display: none;
 }
+
 

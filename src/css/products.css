@@ -61,17 +61,30 @@
     display: block;
     align-items: flex-end;
 }
+.product-details_card .card-header{
+    border: none;
+    height: 350px;
+    background-color: transparent;
+}
+.details_info{
+    align-items: flex-end;
+}
+
+.details_info p{
+    font-weight: 300;
+}
 
 .details_image{
     width: calc(100% + 50px);
+    max-height: 300px;
     left: -90px;
-    top: -20px;
+    top: -110px;
     position: relative;
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    transform: rotate(-25deg);
 }
 
 .radios_container{
@@ -100,6 +113,7 @@
     font-weight: bold;
     height: 2px;
     padding:0;
+    top: 0;
     text-align: start;
 }
 
@@ -118,7 +132,6 @@
     justify-content: flex-end;
     display: flex;
     float: right;
-    bottom: 0;
     position: relative;
     width: fit-content;
 }
@@ -129,31 +142,28 @@
     width: 120px;
     height: 120px;
     border-radius: 15%;
-    bottom: 0;
-    left: 0;    
+    left: 0;
+    
 }
 
 .details_price{
     float: right;
     padding: 0 50px;
-}
-
-.details_info{
-    padding: 10% 20px 0;
-    width: 100%;;
-    bottom: 0;
-    text-align: left;
-    align-items: flex-end;
-}
-
-.details_info p{
-    font-weight: 300;
+    top: -100px;
+    position: relative;
 }
 
 
+.degree_holder{
+    width: 100px;
+    height: 150px;
+    left: -60px;
+    padding: 30px 10px;
+    position: relative;
+    bottom:0;
+}
 
-
-
-
-
-
+.degree_img{
+    height: 80px;
+    width: 80px;
+}

@@ -5,10 +5,16 @@ function ItemDetails(props){
     var item = props.product;
 
     return(
-        <div className='product-details_card'>
-            <img src={item.src} className='details_image'/>
-            <h1 className='details_price'>${item.price}</h1>
-            <div className="details_info">
+        <div className='card product-details_card'>
+            <div className='card-header'>
+                <a className='circle degree_holder'>
+                    <img className='degree_img' src='images/360-degrees.png'/>
+                </a>
+                <img src={item.src} className='details_image' id='img_details'/>
+                <h1 className='details_price'>${item.price}</h1>
+            </div>
+            
+            <div className='details_info card-body'>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <form name='add-item-form'>
@@ -38,7 +44,7 @@ function ItemDetails(props){
                     
                 </form>
             </div>
-            <div class="details_btn_container">
+            <div class="details_btn_container flex-end">
                 <button type='submit' className='details_add_btn btn' form='add-item-form'><i className='fas fa-plus fa-3x'></i></button>
             </div>
         </div>
