@@ -1,15 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
+import Navigator from './navigator';
 
-function NotFound (props){
-  const navigate = useNavigate();
+function NotFound (){
 
   return (
     <>
-      <div className="container-fluid main-container">
-        <img src='images/construction.PNG'/>
-        <button onClick={navigate(-1)}>Go Back to Main Page</button>
+      <div className='row container-fluid'>
+        <Navigator/>
+      </div>
+      <div className="container-fluid main_container not_found">
       </div>
     </>
   );

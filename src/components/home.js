@@ -1,11 +1,9 @@
-import React, { useState} from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect} from "react";
 import '../App.css';
 import Navigator from './navigator';
 import NavigatorBottom from './navBottom'
 import AddProductCard from './products';
 import ItemDetails from './productDetails';
-import NotFound from './notFound';
 
 function Home (props){
     
@@ -25,31 +23,29 @@ function Home (props){
 
   const scrollList = ((direction)=> {
     Scroll(direction);
-  });
-
-  const navigate = useNavigate();
-
+  });;
+  
   return (
     <>
-      <div class='row'>
-        <Navigator navigate={navigate} />
+      <div className='row' key='top-nav'>
+        <Navigator/>
       </div>
-      <div className='row main_container tab_page active'>
+      <div className='row main_container tab_page active' key='main-section'>
         <div className='col-lg-4 secondary_container'>
             {/*Card Details*/}
-            <div class='container-fluid details_container'>
+            <div className='container-fluid details_container'>
               <ItemDetails product={products[productId]} />
             </div>
         </div>
-        <div class="col-lg-8 secondary_container">
-          <div class="container-fluid">
+        <div className='col-lg-8 secondary_container'>
+          <div className='container-fluid'>
             {/*Product List*/}
             <div className='product_list row' id='product-list'>
               <AddProductCard products={products} view={viewDetails} />
             </div>
 
             {/*Bottom Navigator*/}
-            <div class="row bottom_nav">
+            <div className='row bottom_nav'>
               <NavigatorBottom scroll={scrollList}/>
             </div>
           </div>
@@ -62,23 +58,23 @@ function Home (props){
 export default Home;
 
 function Scroll(direction){
-    const elem = document.getElementById('product-list');
-    let scroller = elem.scrollLeft;
-  
-    if(direction === 0){
-      let elemWidth = elem.clientWidth;
-      let scrollableWidth = elem.scrollWidth;
-      let total = scrollableWidth - scroller - elemWidth;
-      
-      if(total !== elem.offsetWidth)
-      {
-          elem.scrollLeft += 420;
-      }
-    }
-    else{
-      if( scroller !== 0)
-      {
-          elem.scrollLeft -= 420;
-      }
+  const elem = document.getElementById('product-list');
+  let scroller = elem.scrollLeft;
+
+  if(direction === 0){
+    let elemWidth = elem.clientWidth;
+    let scrollableWidth = elem.scrollWidth;
+    let total = scrollableWidth - scroller - elemWidth;
+    
+    if(total !== elem.offsetWidth)
+    {
+        elem.scrollLeft += 420;
     }
   }
+  else{
+    if( scroller !== 0)
+    {
+        elem.scrollLeft -= 420;
+    }
+  }
+}

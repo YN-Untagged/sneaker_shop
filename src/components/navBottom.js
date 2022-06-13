@@ -14,15 +14,15 @@ function NavigatorBottom(props){
                 <ul className='navbar-nav'>
                     <li className="nav-item">
                         <a className="nav-link">New arrivals</a>
-                        <span className='checked_mark'><i class="fas fa-window-minimize"></i></span>
+                        <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link">Popular</a>
-                        <span className='checked_mark'><i class="fas fa-window-minimize"></i></span>
+                        <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link">Recommanded</a>
-                        <span className='checked_mark'><i class="fas fa-window-minimize"></i></span>
+                        <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
                     </li>
                 </ul>
                 <div>
