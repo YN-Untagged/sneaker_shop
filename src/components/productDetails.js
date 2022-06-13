@@ -1,8 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
+import swal from 'sweetalert';
 import '../css/products.css';
 
 function ItemDetails(props){
     var item = props.product;
+    const addToCart= (()=>{
+        swal({
+            title: "Added to Cart!",
+            text: "Item added to cart!",
+            icon: "success"
+        });
+    });
+
 
     return(
         <div className='card product-details_card'>
@@ -45,7 +54,7 @@ function ItemDetails(props){
                 </form>
             </div>
             <div className='details_btn_container flex-end' key='submit_button'>
-                <button type='submit' className='details_add_btn btn' form='add-item-form'><i className='fas fa-plus fa-3x'></i></button>
+                <button type='submit' className='details_add_btn btn' form='add-item-form' onClick={addToCart}><i className='fas fa-plus fa-3x'></i></button>
             </div>
         </div>
 

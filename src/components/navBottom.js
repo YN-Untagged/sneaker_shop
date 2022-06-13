@@ -9,20 +9,21 @@ function NavigatorBottom(props){
     });
 
     return(
-        <nav className="navbar navbar-expand-sm">
+       <nav className="navbar navbar-expand-sm">
             <div className="container-fluid">
-                <ul className='navbar-nav'>
+                <ul className="nav">
                     <li className="nav-item">
-                        <a className="nav-link">New arrivals</a>
+                        <a className="nav-link active" data-bs-toggle="tab" href="#home">New arrivals</a>
                         <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link">Popular</a>
+                        <a className="nav-link" data-bs-toggle="tab" href="#popular">Popular</a>
                         <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link">Recommanded</a>
+                        <a className="nav-link" data-bs-toggle="tab" href="#recommanded">Recommanded</a>
                         <span className='checked_mark'><i className="fas fa-window-minimize"></i></span>
+                        
                     </li>
                 </ul>
                 <div>

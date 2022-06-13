@@ -59,6 +59,10 @@ a{
   padding-right: 0;
 }
 
+.products_container{
+  padding-top: 170px;
+}
+
 .product_list{
   display: inline-flexbox;
   flex-direction: row;

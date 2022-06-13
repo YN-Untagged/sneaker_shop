@@ -82,3 +82,31 @@
     padding:0;
     text-align: start;
 }
+
+.search_input{
+    -webkit-transition:width 500ms;
+	-moz-transition:width 500ms;
+	transition:width 500ms;
+    float: right;
+    width: 60px;
+    overflow: hidden;
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: -10px;
+    border-radius: 25px;
+}
+
+.search_input input[type=text]{
+    outline: none;
+    border: none;
+}
+
+.search_input input[type=text]:focus {
+    border: none;
+  }
+
+.search_input:hover{
+    width: 300px;
+    background: white;
+}

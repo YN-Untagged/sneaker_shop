@@ -19,6 +19,7 @@ function Home (props){
 
   const viewDetails = ((id) => {
     setProductId(id);
+    
   });
 
   const scrollList = ((direction)=> {
@@ -38,10 +39,15 @@ function Home (props){
             </div>
         </div>
         <div className='col-lg-8 secondary_container'>
-          <div className='container-fluid'>
-            {/*Product List*/}
-            <div className='product_list row' id='product-list'>
-              <AddProductCard products={products} view={viewDetails} />
+          <div className='container-fluid products_container'>
+            <div className="tab-content">
+                <div className="tab-pane container-fluid active" id="home">
+                  <div className='product_list row' id='product-list'>
+                    <AddProductCard products={products} view={viewDetails} />
+                  </div>
+                </div>
+                <div className="tab-pane container-fluid fade" id="popular">Popular</div>
+                <div className="tab-pane container-fluid fade" id="recommanded">Recommanded</div>
             </div>
 
             {/*Bottom Navigator*/}

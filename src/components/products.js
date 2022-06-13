@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../App.css';
 import '../css/products.css';
+import swal from 'sweetalert';
 
 function AddProductCard(props){
     
@@ -8,12 +9,20 @@ function AddProductCard(props){
         props.view (id);
     });
 
+    const addToCart= (()=>{
+        swal({
+            title: "Added to Cart!",
+            text: "Item added to cart!",
+            icon: "success"
+        });
+    });
+
     return(
         props.products.map((item) =>
             <div className='card_holder'>
                 <div className='card' key={item.id}>
                     <div className='image_holder' style={{backgroundColor: `hsl(${Math.floor(Math.random()*360)}deg, 65%, 55%`}}>
-                        <div className='add_btn'><i className="fas fa-plus"></i></div>
+                        <div className='add_btn' onClick={addToCart}><i className="fas fa-plus"></i></div>
                         <img className='product_image' src={item.src} alt='product image'/>
                     </div>
                     <div className='product_info'>
