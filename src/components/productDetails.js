@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import swal from 'sweetalert';
 import '../css/products.css';
 
 function ItemDetails(props){
-    var item = props.product;
+
+    const item = props.product;
     const addToCart= (()=>{
         swal({
             title: "Added to Cart!",
@@ -12,6 +13,12 @@ function ItemDetails(props){
         });
     });
 
+    /*const [imgSrc, setImgSrc] = useState(item.src);*/
+
+    const changeImage = ((src)=>{
+        /*setImgSrc(src);*/
+        document.getElementById('img_details').src = src;
+    });
 
     return(
         <div className='card product-details_card'>
@@ -41,8 +48,8 @@ function ItemDetails(props){
                     <div className='radios_container'>
                         {item.colors.map((color)=>
                             <>
-                                <input type='radio' className='btn-check' name='options' id={color}  value={color}/>
-                                <label className='btn btn-light color_btn' htmlFor={color} style={{color: color}}>
+                                <input type='radio' className='btn-check' name='options' id={color.color}  value={color.color} onClick={()=>changeImage(color.src)}/>
+                                <label className='btn btn-light color_btn' htmlFor={color.color} style={{color: color.color}}>
                                     <i className='fas fa-circle fa-2x'></i>
                                     <span className='checked_mark'><i className='fas fa-window-minimize'></i></span>
                                 </label>

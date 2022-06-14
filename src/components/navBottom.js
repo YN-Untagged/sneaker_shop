@@ -1,11 +1,11 @@
 import '../App.css';
 import '../css/navigator.css';
 
-function NavigatorBottom(props){
+function NavigatorBottom(){
 
     const scroll = ((direction)=>
     {
-        props.scroll(direction);
+        Scroll(direction);
     });
 
     return(
@@ -36,3 +36,25 @@ function NavigatorBottom(props){
 }
 
 export default NavigatorBottom;
+
+function Scroll(direction){
+    const elem = document.getElementById('product-list');
+    let scroller = elem.scrollLeft;
+  
+    if(direction === 0){
+      let elemWidth = elem.clientWidth;
+      let scrollableWidth = elem.scrollWidth;
+      let total = scrollableWidth - scroller - elemWidth;
+      
+      if(total !== elem.offsetWidth)
+      {
+          elem.scrollLeft += 420;
+      }
+    }
+    else{
+      if( scroller !== 0)
+      {
+          elem.scrollLeft -= 420;
+      }
+    }
+  }
